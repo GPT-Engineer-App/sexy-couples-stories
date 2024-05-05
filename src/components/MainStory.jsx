@@ -1,5 +1,5 @@
 import React from 'react';
-import KissingGif from '../images/kissing-gif-1.gif';
+import KissingGif from '../../public/images/kissing-gif-1.gif';
 
 const MainStory = () => {
   return (
