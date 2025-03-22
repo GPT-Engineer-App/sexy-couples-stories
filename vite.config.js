@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import daisyui from "daisyui";
@@ -5,19 +6,22 @@ import daisyui from "daisyui";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), daisyui],
+  server: {
+    port: 8080
+  },
   daisyui: {
     themes: [
       {
         mytheme: {
-          primary: "#5555ff",
+          primary: "#0c8de4",
           secondary: "#d946ef",
-          accent: "#0000ff",
-          neutral: "#ff00ff",
+          accent: "#0071c2",
+          neutral: "#64748b",
           "base-100": "#fff",
-          info: "#0000ff",
-          success: "#00ff00",
-          warning: "#ff9900",
-          error: "#ff0000",
+          info: "#0c8de4",
+          success: "#10b981",
+          warning: "#f59e0b",
+          error: "#ef4444",
         },
       },
     ],

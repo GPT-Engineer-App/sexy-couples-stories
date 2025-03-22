@@ -1,3 +1,99 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-neutral-800;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-gradient-to-tr from-neutral-50 to-neutral-100 min-h-screen;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-medium tracking-tight;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/70 backdrop-blur-md rounded-xl border border-neutral-200/50 shadow-sm transition-all duration-300;
+  }
+  
+  .input-field {
+    @apply px-4 py-3 rounded-lg border border-neutral-200 focus:border-primary-400 focus:ring-2 focus:ring-primary-100 outline-none transition-all duration-200 bg-white/80 backdrop-blur-xs;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white px-5 py-2.5 rounded-lg font-medium transition-all duration-200 focus:ring-4 focus:ring-primary-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-neutral-100 text-neutral-800 border border-neutral-200 px-5 py-2.5 rounded-lg font-medium transition-all duration-200 focus:ring-4 focus:ring-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .divider {
+    @apply w-full h-px bg-neutral-200 my-6;
+  }
+}
+
+.glassmorphism {
+  @apply bg-white/50 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+/* Loading animation */
+.loading-dots {
+  @apply inline-flex space-x-1 mx-1;
+}
+
+.loading-dots div {
+  @apply w-1.5 h-1.5 bg-current rounded-full animate-pulse opacity-75;
+}
+
+.loading-dots div:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.loading-dots div:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.loading-dots div:nth-child(3) {
+  animation-delay: 400ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-400;
+}
